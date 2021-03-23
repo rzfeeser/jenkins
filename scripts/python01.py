@@ -5,7 +5,7 @@
 def main():
 
     # this will be displayed to standard out
-    print("You have 13 hours to solve the labyrinth...")
+    print("You have 13 hours in which to solve the labyrinth...")
     
 if __name__ == "__main__":
     main()
