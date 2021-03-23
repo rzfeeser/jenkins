@@ -16,7 +16,7 @@ def main():
     
     # create a file called "../locationISS.txt"
     # containing our desired data set
-    with open("../locationISS.txt") as f:
+    with open("../locationISS.txt", "w") as f:
         f.write(isslocation.get("iss_position"))
         
     
