@@ -16,8 +16,8 @@ def main():
     
     # create a file called "../locationISS.txt"
     # containing our desired data set
-    with open("../locationISS.txt", "w") as f:
-        f.write(isslocation.get("iss_position"))
+    with open("../locationISS.txt", "w") as zfile:
+        zfile.write(f"{isslocation.get("iss_position")}")
         
     
 if __name__ == "__main__":
