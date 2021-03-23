@@ -1,0 +1,15 @@
+---
+
+- name: A simple playbook that installs a list of apps
+  hosts: all
+  connection: ssh
+  gather_facts: false
+  
+  tasks:
+  
+  - name: Use the apt package manager
+    apt:
+      name:
+        - figlet
+        - cowsay
+      state: present
