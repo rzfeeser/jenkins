@@ -1,4 +1,4 @@
-pipeline {                              // start our pipeline
+pipeline {                              // start our pipeline -FIRE!
     agent any
     stages {
         stage('Verification Step') {          // stage 1 - "verification"
