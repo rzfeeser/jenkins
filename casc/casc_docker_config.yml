@@ -12,7 +12,7 @@ jenkins:
           ssh:
             sshKeyStrategy:
               manuallyConfiguredSSHKey:
-                credentialsId: "eab1189f-b92b-41f4-bf4a-f47f1c800950"
+                credentialsId: "eab1189f-b92b-41f4-bf4a-f47f1c800950"   ## you may need to update this value
                 sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
         dockerTemplateBase:
           cpuPeriod: 0
@@ -27,7 +27,7 @@ jenkins:
           ssh:
             sshKeyStrategy:
               manuallyConfiguredSSHKey:
-                credentialsId: "eab1189f-b92b-41f4-bf4a-f47f1c800950"
+                credentialsId: "eab1189f-b92b-41f4-bf4a-f47f1c800950"   ## you may need to update this value
                 sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
         dockerTemplateBase:
           cpuPeriod: 0
