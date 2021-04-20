@@ -1,0 +1,8 @@
+unclassified:
+  ansibleTowerGlobalConfig:
+        towerInstallation:
+        - enableDebugging: true
+        towerCredentialsId: ansible-tower-jenkins-user  # create these by hand in jenkins
+        towerDisplayName: Infra-Ansible-Tower-01
+        towerTrustCert: true
+        towerURL: https://infra-ansible-tower-01.example.com
