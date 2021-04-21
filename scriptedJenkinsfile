@@ -7,13 +7,12 @@ node {
     label 'java-docker-worker'
     stage('build') {
         def runme = 'top'  // define the var runme as top
-        if (${runme} == 'master') {
-            echo 'I would only execute if we are running against a master branch'
+        if (${runme} == 'top') {
+            echo 'I only execute if runme is set to top'
         } else if (${runme} == 'main') {
-            echo 'I would only execute if we were running against a main branch'
+            echo 'I would only execute if runme were set to main'
         } else {
             sh 'python3 --version'
-            echo env.BRANCH_NAME
         }
     }
 }
