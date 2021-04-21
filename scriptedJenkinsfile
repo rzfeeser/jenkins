@@ -7,9 +7,9 @@ node {
     label 'java-docker-worker'
     stage('build') {
         def runme = 'top'  // define the var runme as top
-        if (${runme} == 'top') {
+        if ('${runme}' == 'top') {
             echo 'I only execute if runme is set to top'
-        } else if (${runme} == 'main') {
+        } else if ('${runme}' == 'main') {
             echo 'I would only execute if runme were set to main'
         } else {
             sh 'python3 --version'
