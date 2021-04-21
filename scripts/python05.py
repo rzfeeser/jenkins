@@ -5,7 +5,7 @@
 import json
 
 def main():
-    with open(onISS.txt) as f:
+    with open("onISS.txt") as f:
         astros = json.load(f)
     print(astros)
         
