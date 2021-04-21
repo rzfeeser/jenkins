@@ -6,7 +6,9 @@ import json
 
 def main():
     with open("onISS.txt") as f:
-        print(f.read())
+        #print(f.read())
+        data = json.load(f)
+        print(data)
         
         
 if __name__ == "__main__":
