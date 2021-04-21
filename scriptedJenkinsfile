@@ -12,6 +12,7 @@ node {
             echo 'I would only execute if we were running against a main branch'
         } else {
             sh 'python3 --version'
+            echo env.BRANCH_NAME
         }
     }
 }
