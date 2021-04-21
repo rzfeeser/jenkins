@@ -1,0 +1,32 @@
+jenkins:
+  agentProtocols:
+  - "JNLP4-connect"
+  - "Ping"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+  clouds:
+  - docker:
+      containerCap: 10
+      dockerApi:
+        connectTimeout: 60
+        dockerHost:
+          uri: "tcp://bchd:2375"
+        readTimeout: 60
+      name: "docker"
+      templates:
+      - connector:
+          ssh:
+            sshKeyStrategy:
+              manuallyConfiguredSSHKey:
+                credentialsId: "4694c4f7-a518-458a-aac6-2dc71a02870f"
+                sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
+        dockerTemplateBase:
+          cpuPeriod: 0
+          cpuQuota: 0
+          image: "bibinwilson/jenkins-slave:latest"
+        labelString: "java-docker-worker"
+        name: "java-docker-worker"
+        pullStrategy: PULL_ALWAYS
+        pullTimeout: 300
+        remoteFs: "/home/jenkins"
