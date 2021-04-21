@@ -1,0 +1,17 @@
+/* scripted pipeline is a general purpose DSL
+    built with Groovy. Most of Groovy language is
+    made avail with a scripted pipeline */
+    
+node {
+  // the agent we wish to choose
+    label 'java-docker-worker'
+    stage('build') {
+        if (env.BRANCH_NAME == 'master') {
+            echo 'I would only execute if we are running against a master branch'
+        } else if (env.BRANCH_NAME == 'main') {
+            echo 'I would only execute if we were running against a main branch'
+        } else {
+            sh 'python3 --version'
+        }
+    }
+}
