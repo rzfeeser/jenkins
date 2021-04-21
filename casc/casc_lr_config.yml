@@ -1,0 +1,13 @@
+security:
+  lockableResourcesManager:
+    declaredResources:
+    - description: "Printers in AvengersHQ in upstate NY"
+      labels: "printer"
+      name: "Printer"
+      reservedBy: "Jarvis Edwin"
+    - description: "Stark Industry Phones"
+      labels: "phones, sbc, asterisk"
+      name: "Phones"
+    - description: "etcd instance"
+      labels: "etcd, statemanager"
+      name: "etcd"
