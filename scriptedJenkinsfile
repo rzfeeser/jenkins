@@ -6,13 +6,14 @@ node {
   // the agent we wish to choose
     label 'java-docker-worker'
     stage('build') {
-        if ($BRANCH_NAME == 'master') {
+        def runme = 'top'  // define the var runme as top
+        if (${runme} == 'master') {
             echo 'I would only execute if we are running against a master branch'
-        } else if ($BRANCH_NAME == 'main') {
+        } else if (${runme} == 'main') {
             echo 'I would only execute if we were running against a main branch'
         } else {
             sh 'python3 --version'
-            echo BRANCH_NAME
+            echo env.BRANCH_NAME
         }
     }
 }
