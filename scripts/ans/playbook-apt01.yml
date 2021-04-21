@@ -3,6 +3,9 @@
   hosts: all
   gather_facts: false
   
+  vars:
+    state: present
+  
   tasks:
   
   - name: Use the apt package manager
@@ -10,5 +13,5 @@
       name:
         - figlet
         - cowsay
-      state: present
+      state: "{{ state }}"
     become: yes
