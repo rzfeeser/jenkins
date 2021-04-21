@@ -13,7 +13,7 @@ node {
             echo 'I would only execute if runme were set to main'
         } else {
             sh 'python3 --version'
-            echo '${runme}'
+            echo '${BUILD_NUMBER}'
         }
     }
 }
