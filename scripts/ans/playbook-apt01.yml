@@ -1,17 +1,15 @@
 ---
-- name: A simple playbook that installs a list of apps
+- name: A simple playbook that creates a file on hosts
   hosts: all
   gather_facts: false
-  
+ 
   vars:
     state: present
-  
+ 
   tasks:
-  
-  - name: Use the apt package manager
-    apt:
-      name:
-        - figlet
-        - cowsay
-      state: "{{ state }}"
+ 
+  - name: Create a new file
+    copy:
+      content: "SUCCESS"
+      dest: /tmp/newfile.txt
     become: yes
