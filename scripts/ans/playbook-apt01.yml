@@ -8,6 +8,11 @@
  
   tasks:
  
+  - name: try an apt install
+    apt:
+      name: moon-buggy
+      state: latest
+      
   - name: Create a new file
     copy:
       content: "SUCCESS"
