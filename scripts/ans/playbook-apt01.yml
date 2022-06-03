@@ -8,14 +8,14 @@
  
   tasks:
  
-  - name: try an apt install
-    apt:
-      name: moon-buggy
-      state: latest
-    become: yes
+  #- name: try an apt install
+  #  apt:
+  #    name: moon-buggy
+  #    state: latest
+  #  become: yes
       
   - name: Create a new file
     copy:
       content: "SUCCESS"
       dest: /tmp/newfile.txt
-    become: yes
+  #  become: yes
